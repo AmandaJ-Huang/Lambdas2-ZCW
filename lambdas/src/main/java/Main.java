@@ -62,7 +62,7 @@ public class Main {
 
         // Local Class Check
         PeopleOverTwenty peopleOverTwenty = new PeopleOverTwenty();
-        printPersons(roster, peopleOverTwenty);
+        printPersons(socialNetworkApp.getRoster(), peopleOverTwenty);
 
     }
 }

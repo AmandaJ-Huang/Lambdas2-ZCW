@@ -1,3 +1,5 @@
+import com.sun.tools.javac.comp.Check;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -50,5 +52,16 @@ public class Main {
         // SocialNetwork
         List<Person> roster = Arrays.asList(bob, michelle, angel, dominic, tim);
         SocialNetworkApp socialNetworkApp = new SocialNetworkApp(roster);
+
+        // Anonymous Class
+        CheckPerson underTwentyAndMale = new CheckPerson() {
+            @Override
+            public boolean test(Person p) {
+                return (p.getGender() == Person.Sex.MALE) && (p.getAge() < 20);
+            }
+        };
+
+        // Print Person Check
+        printPersons(socialNetworkApp.getRoster(), underTwentyAndMale);
     }
 }

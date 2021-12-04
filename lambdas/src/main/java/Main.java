@@ -50,5 +50,9 @@ public class Main {
         // SocialNetwork
         List<Person> roster = Arrays.asList(bob, michelle, angel, dominic, tim);
         SocialNetworkApp socialNetworkApp = new SocialNetworkApp(roster);
+
+        // Lambda Expression
+        CheckPerson maleAndOver5 = p -> p.getGender() == Person.Sex.MALE && p.getAge() > 5;
+        printPersons(socialNetworkApp.getRoster(), maleAndOver5);
     }
 }

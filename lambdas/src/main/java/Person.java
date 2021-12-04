@@ -59,7 +59,8 @@ public class Person {
         this.emailAddress = emailAddress;
     }
 
-    public String printPerson() {
+    @Override
+    public String toString() {
         return new StringBuilder()
                 .append("Name: " + name)
                 .append("\nBirthday: " + birthday)
@@ -74,4 +75,10 @@ public class Person {
         Email: email
          */
     }
+
+    public void printPerson() {
+        System.out.println(this);
+    }
+
+
 }

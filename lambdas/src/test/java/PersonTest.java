@@ -65,7 +65,8 @@ public class PersonTest {
                 "\nEmail: bob@bob.com";
 
         // When
-        String actual = person.printPerson();
+        String actual = person.toString();
+        person.printPerson();
 
         // Then
         Assert.assertEquals(expected, actual);

@@ -32,4 +32,20 @@ public class PersonTest {
         Assert.assertEquals(gender, actualGender);
         Assert.assertEquals(emailAddress, actualEmailAddress);
     }
+
+    @Test
+    public void testGetAge() {
+        // Given
+        Person person = new PersonBuilder()
+                .setName("Bob")
+                .setBirthday(LocalDate.of(1994, 4, 20))
+                .createPerson();
+        Integer expected = 27;
+
+        // When
+        Integer actual = person.getAge();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }

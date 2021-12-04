@@ -59,13 +59,19 @@ public class Person {
         this.emailAddress = emailAddress;
     }
 
-    public void printPerson() {
-        System.out.println(
-                new StringBuilder()
-                        .append("Name: " + name)
-                        .append("\nBirthday: " + birthday)
-                        .append("\nGender: " + gender)
-                        .append("\nEmail: " + emailAddress)
-        );
+    public String printPerson() {
+        return new StringBuilder()
+                .append("Name: " + name)
+                .append("\nBirthday: " + birthday)
+                .append("\nGender: " + gender)
+                .append("\nEmail: " + emailAddress)
+                .toString();
+
+        /* format =
+        Name: name
+        Birthday: yyyy-mm-dd
+        Gender: MALE/FEMALE
+        Email: email
+         */
     }
 }

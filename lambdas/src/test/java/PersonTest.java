@@ -48,4 +48,26 @@ public class PersonTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testPrintPerson() {
+        // Given
+        Person person = new PersonBuilder()
+                .setName("Bob")
+                .setGender(Person.Sex.MALE)
+                .setBirthday(LocalDate.of(1994, 4, 20))
+                .setEmailAddress("bob@bob.com")
+                .createPerson();
+
+        String expected = "Name: Bob" +
+                "\nBirthday: 1994-04-20" +
+                "\nGender: MALE" +
+                "\nEmail: bob@bob.com";
+
+        // When
+        String actual = person.printPerson();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }

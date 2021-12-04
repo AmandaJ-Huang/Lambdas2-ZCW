@@ -2,6 +2,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
 
 public class SocialNetworkAppTest {
 
@@ -40,14 +42,15 @@ public class SocialNetworkAppTest {
             .setEmailAddress("tim@email.com")
             .createPerson();
 
+    private List<Person> roster = Arrays.asList(bob, michelle, angel, dominic, tim);
+
     @Test
     public void testConstructor() {
         // Given
-        SocialNetworkApp app = new SocialNetworkApp();
-        Integer expected = 1;
+        SocialNetworkApp app = new SocialNetworkApp(roster);
+        Integer expected = 5;
 
         // When
-        app.addToRoster(bob);
         Integer actual = app.getSize();
 
         // Then

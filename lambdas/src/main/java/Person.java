@@ -60,6 +60,14 @@ public class Person {
     }
 
     public void printPerson() {
-        // ...
+        System.out.println(
+                new StringBuilder()
+                        .append("Person Profile {")
+                        .append("\nName: " + name)
+                        .append("\nBirthday: " + birthday)
+                        .append("\nGender: " + gender)
+                        .append("\nEmail: " + emailAddress)
+                        .append("\n}")
+        );
     }
 }

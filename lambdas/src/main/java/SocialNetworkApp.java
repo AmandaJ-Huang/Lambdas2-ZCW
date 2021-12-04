@@ -12,6 +12,18 @@ public class SocialNetworkApp {
         this.roster = roster;
     }
 
+    public void addToRoster(Person person) {
+        this.roster.add(person);
+    }
+
+    public List<Person> getRoster() {
+        return this.roster;
+    }
+
+    public Integer getSize() {
+        return this.roster.size();
+    }
+
     // Approach 1 - match one (age)
     public static void printPersonsOlderThan(List<Person> roster, int age) {
         for (Person p : roster) {
